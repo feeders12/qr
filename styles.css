@@ -31,6 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    padding-bottom: 80px; /* footer 공간 확보 */
 }
 
 /* 배경 이미지 오버레이 주석 처리
@@ -60,6 +61,7 @@ body::before {
     padding: 20px;
     width: 100%;
     flex: 1;
+    padding-bottom: 60px;
 }
 
 /* 모든 h1 태그에 공통 스타일 적용 */
@@ -543,4 +545,25 @@ h2 {
 .phone-link::before {
     content: '📞';
     margin-right: 5px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #1a237e;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* 다른 요소들 위에 표시되도록 z-index 추가 */
+}
+
+.footer p {
+    margin: 0;
+    color: #1a237e;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8); /* 텍스트 가독성 향상 */
 } 
