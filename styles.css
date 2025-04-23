@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-bottom: 80px; /* footer 공간 확보 */
+    padding-bottom: 0; /* footer 공간 제거 */
 }
 
 /* 배경 이미지 오버레이 주석 처리
@@ -61,7 +61,8 @@ body::before {
     padding: 20px;
     width: 100%;
     flex: 1;
-    padding-bottom: 60px;
+    padding-bottom: 20px; /* 하단 패딩 감소 */
+    margin-bottom: 0; /* 하단 마진 제거 */
 }
 
 /* 모든 h1 태그에 공통 스타일 적용 */
@@ -547,23 +548,25 @@ h2 {
     margin-right: 5px;
 }
 
+/* footer 스타일 제거 */
 .footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #ffffff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-top: 2px solid #1a237e;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* 다른 요소들 위에 표시되도록 z-index 추가 */
+    display: none;
 }
 
 .footer p {
+    display: none;
+}
+
+/* 저작권 표시 스타일 */
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.copyright p {
+    color: #666;
+    font-size: 14px;
     margin: 0;
-    color: #1a237e;
-    font-size: 16px;
-    font-weight: 500;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8); /* 텍스트 가독성 향상 */
 } 
